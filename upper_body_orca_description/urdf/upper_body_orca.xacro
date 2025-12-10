@@ -1,0 +1,588 @@
+<?xml version="1.0" ?>
+<robot name="upper_body_orca" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find upper_body_orca_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find upper_body_orca_description)/urdf/upper_body_orca.trans" />
+<xacro:include filename="$(find upper_body_orca_description)/urdf/upper_body_orca.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin xyz="-8.206989537682713e-08 0.018287346978047462 1.0622419904682066" rpy="0 0 0"/>
+    <mass value="60.617182878668785"/>
+    <inertia ixx="12.436653" iyy="12.585529" izz="0.722554" ixy="-0.0" iyz="-0.571169" ixz="4e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find upper_body_orca_description)/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find upper_body_orca_description)/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="motor_1_left_1">
+  <inertial>
+    <origin xyz="0.03332172082140869 -0.001379086412455488 -1.5100163768710928e-05" rpy="0 0 0"/>
+    <mass value="2.519383043137114"/>
+    <inertia ixx="0.001981" iyy="0.001967" izz="0.002088" ixy="-7.4e-05" iyz="-2e-06" ixz="-1e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.175 -0.064713 -1.193" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find upper_body_orca_description)/meshes/motor_1_left_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.175 -0.064713 -1.193" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find upper_body_orca_description)/meshes/motor_1_left_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="shoulder_upper_left_1">
+  <inertial>
+    <origin xyz="0.02846315183051873 0.013570393203266085 9.597744856293389e-05" rpy="0 0 0"/>
+    <mass value="0.24201082575231075"/>
+    <inertia ixx="0.000257" iyy="0.000337" izz="0.000318" ixy="-8.4e-05" iyz="1e-06" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.24755 -0.064713 -1.193" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find upper_body_orca_description)/meshes/shoulder_upper_left_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.24755 -0.064713 -1.193" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find upper_body_orca_description)/meshes/shoulder_upper_left_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="motor_2_left_1">
+  <inertial>
+    <origin xyz="0.31081493725360815 0.08773716714987717 -1.2168628117845826" rpy="0 0 0"/>
+    <mass value="2.5193830431371826"/>
+    <inertia ixx="0.002088" iyy="0.001981" izz="0.001967" ixy="1e-06" iyz="-7.4e-05" ixz="2e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.013486 0.028173 -2.411071" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find upper_body_orca_description)/meshes/motor_2_left_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.013486 0.028173 -2.411071" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find upper_body_orca_description)/meshes/motor_2_left_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="shoulder_lower_left_1">
+  <inertial>
+    <origin xyz="3.6808215808648015e-08 0.013239289484532596 -0.03140592770573791" rpy="0 0 0"/>
+    <mass value="0.10573926042536956"/>
+    <inertia ixx="8.9e-05" iyy="7.3e-05" izz="6.4e-05" ixy="0.0" iyz="2.5e-05" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.297344 -0.020336 -1.192829" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find upper_body_orca_description)/meshes/shoulder_lower_left_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.297344 -0.020336 -1.192829" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find upper_body_orca_description)/meshes/shoulder_lower_left_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="motor_3_left_1">
+  <inertial>
+    <origin xyz="-3.1739648731987646e-05 6.645087274544104e-05 -0.03175963100367296" rpy="0 0 0"/>
+    <mass value="1.2789009844651547"/>
+    <inertia ixx="0.000664" iyy="0.000656" izz="0.000615" ixy="1e-06" iyz="-0.0" ixz="-1e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.297344 -0.057327 -1.143993" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find upper_body_orca_description)/meshes/motor_3_left_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.297344 -0.057327 -1.143993" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find upper_body_orca_description)/meshes/motor_3_left_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="elbow_upper_left_1">
+  <inertial>
+    <origin xyz="0.011833861052786998 -0.027673781282610922 -0.04638878769930721" rpy="0 0 0"/>
+    <mass value="0.30475704432327766"/>
+    <inertia ixx="0.000539" iyy="0.000685" izz="0.000391" ixy="-1e-06" iyz="-1e-06" ixz="-6.3e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.281344 -0.08504 -1.084643" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find upper_body_orca_description)/meshes/elbow_upper_left_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.281344 -0.08504 -1.084643" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find upper_body_orca_description)/meshes/elbow_upper_left_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="motor_4_left_1">
+  <inertial>
+    <origin xyz="0.027590925996080373 -0.027778676162959537 -0.01603177672872469" rpy="0 0 0"/>
+    <mass value="1.2789009846300046"/>
+    <inertia ixx="0.000615" iyy="0.000656" izz="0.000664" ixy="0.0" iyz="-1e-06" ixz="-1e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.269067 -0.08504 -0.984" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find upper_body_orca_description)/meshes/motor_4_left_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.269067 -0.08504 -0.984" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find upper_body_orca_description)/meshes/motor_4_left_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="elbow_lower_left_1">
+  <inertial>
+    <origin xyz="-0.008890257585235095 -0.00021476523833271338 -0.02746891104699789" rpy="0 0 0"/>
+    <mass value="0.11127931833149811"/>
+    <inertia ixx="9.7e-05" iyy="8.7e-05" izz="9.5e-05" ixy="-0.0" iyz="-0.0" ixz="-2.2e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.328417 -0.057327 -0.968" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find upper_body_orca_description)/meshes/elbow_lower_left_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.328417 -0.057327 -0.968" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find upper_body_orca_description)/meshes/elbow_lower_left_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="motor_5_left_1">
+  <inertial>
+    <origin xyz="-6.566245462102938e-05 0.03203160604981097 -0.027590769763341516" rpy="0 0 0"/>
+    <mass value="1.2789009846299557"/>
+    <inertia ixx="0.000656" iyy="0.000664" izz="0.000615" ixy="1e-06" iyz="-1e-06" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.295003 -0.025129 -0.919603" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find upper_body_orca_description)/meshes/motor_5_left_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.295003 -0.025129 -0.919603" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find upper_body_orca_description)/meshes/motor_5_left_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="motor_1_right_1">
+  <inertial>
+    <origin xyz="-0.033321826088991036 -0.0013790640620918448 -1.5105401554249553e-05" rpy="0 0 0"/>
+    <mass value="2.5193785937824313"/>
+    <inertia ixx="0.001981" iyy="0.001967" izz="0.002088" ixy="7.4e-05" iyz="-2e-06" ixz="1e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.175 -0.064713 -1.193" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find upper_body_orca_description)/meshes/motor_1_right_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.175 -0.064713 -1.193" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find upper_body_orca_description)/meshes/motor_1_right_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="shoulder_upper_right_1">
+  <inertial>
+    <origin xyz="-0.02846326366294477 0.01357039320328468 9.597744856204571e-05" rpy="0 0 0"/>
+    <mass value="0.24201082575231098"/>
+    <inertia ixx="0.000257" iyy="0.000337" izz="0.000318" ixy="8.4e-05" iyz="1e-06" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.24755 -0.064713 -1.193" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find upper_body_orca_description)/meshes/shoulder_upper_right_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.24755 -0.064713 -1.193" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find upper_body_orca_description)/meshes/shoulder_upper_right_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="motor_2_right_1">
+  <inertial>
+    <origin xyz="0.21156495621046684 0.08773717377041583 1.19403716639083" rpy="0 0 0"/>
+    <mass value="2.5193786189086413"/>
+    <inertia ixx="0.002088" iyy="0.001981" izz="0.001967" ixy="-1e-06" iyz="-7.4e-05" ixz="-2e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.508894 0.028173 -0.000171" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find upper_body_orca_description)/meshes/motor_2_right_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.508894 0.028173 -0.000171" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find upper_body_orca_description)/meshes/motor_2_right_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="shoulder_lower_right_1">
+  <inertial>
+    <origin xyz="-1.4864064651343156e-07 0.013239289484553642 -0.031405927705738135" rpy="0 0 0"/>
+    <mass value="0.10573926042536955"/>
+    <inertia ixx="8.9e-05" iyy="7.3e-05" izz="6.4e-05" ixy="-0.0" iyz="2.5e-05" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.297344 -0.020336 -1.192829" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find upper_body_orca_description)/meshes/shoulder_lower_right_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.297344 -0.020336 -1.192829" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find upper_body_orca_description)/meshes/shoulder_lower_right_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="motor_3_right_1">
+  <inertial>
+    <origin xyz="3.162204402135105e-05 6.646313117387309e-05 -0.031759610561482354" rpy="0 0 0"/>
+    <mass value="1.2789020361819683"/>
+    <inertia ixx="0.000664" iyy="0.000656" izz="0.000615" ixy="-1e-06" iyz="-0.0" ixz="1e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.297344 -0.057327 -1.143993" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find upper_body_orca_description)/meshes/motor_3_right_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.297344 -0.057327 -1.143993" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find upper_body_orca_description)/meshes/motor_3_right_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="elbow_upper_right_1">
+  <inertial>
+    <origin xyz="0.02016602711478982 0.02775121871740729 -0.04638878769930743" rpy="0 0 0"/>
+    <mass value="0.3047570443232777"/>
+    <inertia ixx="0.000539" iyy="0.000685" izz="0.000391" ixy="1e-06" iyz="-1e-06" ixz="6.3e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.313344 -0.029615 -1.084643" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find upper_body_orca_description)/meshes/elbow_upper_right_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.313344 -0.029615 -1.084643" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find upper_body_orca_description)/meshes/elbow_upper_right_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="motor_4_right_1">
+  <inertial>
+    <origin xyz="-0.027590058270693718 -6.568842134872799e-05 -0.03203177095644261" rpy="0 0 0"/>
+    <mass value="1.2789020363466774"/>
+    <inertia ixx="0.000615" iyy="0.000656" izz="0.000664" ixy="-0.0" iyz="-1e-06" ixz="1e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.269068 -0.057327 -1.0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find upper_body_orca_description)/meshes/motor_4_right_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.269068 -0.057327 -1.0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find upper_body_orca_description)/meshes/motor_4_right_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="elbow_lower_right_1">
+  <inertial>
+    <origin xyz="0.008891145752806418 -0.00021476523831094607 -0.02746891104698923" rpy="0 0 0"/>
+    <mass value="0.11127931833150095"/>
+    <inertia ixx="9.7e-05" iyy="8.7e-05" izz="9.5e-05" ixy="0.0" iyz="-0.0" ixz="2.2e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.328418 -0.057327 -0.968" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find upper_body_orca_description)/meshes/elbow_lower_right_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.328418 -0.057327 -0.968" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find upper_body_orca_description)/meshes/elbow_lower_right_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="motor_5_right_1">
+  <inertial>
+    <origin xyz="-0.027646437119391964 0.01603160027754679 -0.027590790205531346" rpy="0 0 0"/>
+    <mass value="1.278902036346673"/>
+    <inertia ixx="0.000656" iyy="0.000664" izz="0.000615" ixy="-1e-06" iyz="-1e-06" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.267291 -0.041129 -0.919603" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find upper_body_orca_description)/meshes/motor_5_right_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.267291 -0.041129 -0.919603" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find upper_body_orca_description)/meshes/motor_5_right_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="orca_bracket_right_1">
+  <inertial>
+    <origin xyz="-8.569616606834973e-06 0.00145865625872426 -0.011221181816604586" rpy="0 0 0"/>
+    <mass value="0.09798990088312624"/>
+    <inertia ixx="3.7e-05" iyy="2.9e-05" izz="5.2e-05" ixy="0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.295004 -0.057129 -0.860253" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find upper_body_orca_description)/meshes/orca_bracket_right_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.295004 -0.057129 -0.860253" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find upper_body_orca_description)/meshes/orca_bracket_right_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="orca_bracket_left_1">
+  <inertial>
+    <origin xyz="-8.655146277847248e-06 0.0014586562587067115 -0.011221181816604697" rpy="0 0 0"/>
+    <mass value="0.09798990088312624"/>
+    <inertia ixx="3.7e-05" iyy="2.9e-05" izz="5.2e-05" ixy="0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.295003 -0.057129 -0.860253" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find upper_body_orca_description)/meshes/orca_bracket_left_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.295003 -0.057129 -0.860253" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find upper_body_orca_description)/meshes/orca_bracket_left_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="left_arm_link0" type="fixed">
+  <origin xyz="0.175 0.064713 1.193" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="motor_1_left_1"/>
+</joint>
+
+<joint name="left_shoulder_flexor" type="revolute">
+  <origin xyz="0.07255 0.0 0.0" rpy="0 0 0"/>
+  <parent link="motor_1_left_1"/>
+  <child link="shoulder_upper_left_1"/>
+  <axis xyz="1.0 -0.0 0.0"/>
+  <limit upper="1.570796" lower="-2.530727" effort="100" velocity="100"/>
+</joint>
+
+<joint name="left_arm_link1" type="fixed">
+  <origin xyz="-0.261036 -0.092886 1.218071" rpy="0 0 0"/>
+  <parent link="shoulder_upper_left_1"/>
+  <child link="motor_2_left_1"/>
+</joint>
+
+<joint name="left_shoulder_abductor" type="revolute">
+  <origin xyz="0.31083 0.048509 -1.218242" rpy="0 0 0"/>
+  <parent link="motor_2_left_1"/>
+  <child link="shoulder_lower_left_1"/>
+  <axis xyz="-0.0 -1.0 -0.0"/>
+  <limit upper="1.570796" lower="-0.261799" effort="100" velocity="100"/>
+</joint>
+
+<joint name="left_shoulder_rotor" type="revolute">
+  <origin xyz="0.0 0.036991 -0.048836" rpy="0 0 0"/>
+  <parent link="shoulder_lower_left_1"/>
+  <child link="motor_3_left_1"/>
+  <axis xyz="-0.0 0.0 -1.0"/>
+  <limit upper="2.181662" lower="-2.181662" effort="100" velocity="100"/>
+</joint>
+
+<joint name="left_arm_link2" type="fixed">
+  <origin xyz="-0.016 0.027713 -0.05935" rpy="0 0 0"/>
+  <parent link="motor_3_left_1"/>
+  <child link="elbow_upper_left_1"/>
+</joint>
+
+<joint name="left_arm_link3" type="fixed">
+  <origin xyz="-0.012277 0.0 -0.100643" rpy="0 0 0"/>
+  <parent link="elbow_upper_left_1"/>
+  <child link="motor_4_left_1"/>
+</joint>
+
+<joint name="left_elbow_flexor" type="revolute">
+  <origin xyz="0.05935 -0.027713 -0.016" rpy="0 0 0"/>
+  <parent link="motor_4_left_1"/>
+  <child link="elbow_lower_left_1"/>
+  <axis xyz="1.0 -0.0 -0.0"/>
+  <limit upper="1.745329" lower="-0.174533" effort="100" velocity="100"/>
+</joint>
+
+<joint name="left_arm_link4" type="fixed">
+  <origin xyz="-0.033414 -0.032198 -0.048397" rpy="0 0 0"/>
+  <parent link="elbow_lower_left_1"/>
+  <child link="motor_5_left_1"/>
+</joint>
+
+<joint name="right_arm_link0" type="fixed">
+  <origin xyz="-0.175 0.064713 1.193" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="motor_1_right_1"/>
+</joint>
+
+<joint name="right_shoulder_flexor" type="revolute">
+  <origin xyz="-0.07255 0.0 0.0" rpy="0 0 0"/>
+  <parent link="motor_1_right_1"/>
+  <child link="shoulder_upper_right_1"/>
+  <axis xyz="1.0 -0.0 0.0"/>
+  <limit upper="1.570796" lower="-2.530727" effort="100" velocity="100"/>
+</joint>
+
+<joint name="right_arm_link1" type="fixed">
+  <origin xyz="-0.261344 -0.092886 -1.192829" rpy="0 0 0"/>
+  <parent link="shoulder_upper_right_1"/>
+  <child link="motor_2_right_1"/>
+</joint>
+
+<joint name="right_shoulder_abductor" type="revolute">
+  <origin xyz="0.21155 0.048509 1.192658" rpy="0 0 0"/>
+  <parent link="motor_2_right_1"/>
+  <child link="shoulder_lower_right_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+  <limit upper="1.570796" lower="-0.261799" effort="100" velocity="100"/>
+</joint>
+
+<joint name="right_shoulder_rotor" type="revolute">
+  <origin xyz="0.0 0.036991 -0.048836" rpy="0 0 0"/>
+  <parent link="shoulder_lower_right_1"/>
+  <child link="motor_3_right_1"/>
+  <axis xyz="-0.0 -0.0 1.0"/>
+  <limit upper="2.181662" lower="-2.181662" effort="100" velocity="100"/>
+</joint>
+
+<joint name="right_arm_link2" type="fixed">
+  <origin xyz="-0.016 -0.027712 -0.05935" rpy="0 0 0"/>
+  <parent link="motor_3_right_1"/>
+  <child link="elbow_upper_right_1"/>
+</joint>
+
+<joint name="right_arm_link3" type="fixed">
+  <origin xyz="0.044276 0.027712 -0.084643" rpy="0 0 0"/>
+  <parent link="elbow_upper_right_1"/>
+  <child link="motor_4_right_1"/>
+</joint>
+
+<joint name="right_elbow_flexor" type="revolute">
+  <origin xyz="-0.05935 0.0 -0.032" rpy="0 0 0"/>
+  <parent link="motor_4_right_1"/>
+  <child link="elbow_lower_right_1"/>
+  <axis xyz="1.0 -0.0 0.0"/>
+  <limit upper="1.745329" lower="-0.174533" effort="100" velocity="100"/>
+</joint>
+
+<joint name="right_arm_link4" type="fixed">
+  <origin xyz="0.061127 -0.016198 -0.048397" rpy="0 0 0"/>
+  <parent link="elbow_lower_right_1"/>
+  <child link="motor_5_right_1"/>
+</joint>
+
+<joint name="right_elbow_rotor" type="revolute">
+  <origin xyz="-0.027713 0.016 -0.05935" rpy="0 0 0"/>
+  <parent link="motor_5_right_1"/>
+  <child link="orca_bracket_right_1"/>
+  <axis xyz="-0.0 -0.0 1.0"/>
+  <limit upper="1.570796" lower="-1.570796" effort="100" velocity="100"/>
+</joint>
+
+<joint name="left_elbow_rotor" type="revolute">
+  <origin xyz="0.0 0.032 -0.05935" rpy="0 0 0"/>
+  <parent link="motor_5_left_1"/>
+  <child link="orca_bracket_left_1"/>
+  <axis xyz="-0.0 0.0 -1.0"/>
+  <limit upper="1.570796" lower="-1.570796" effort="100" velocity="100"/>
+</joint>
+
+</robot>
